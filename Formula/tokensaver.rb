@@ -5,23 +5,23 @@
 class Tokensaver < Formula
   desc "Local MCP server that turns web pages, PDFs, Office files and JSON into compact, LLM-ready text"
   homepage "https://github.com/use-tokesaver/tokensaver"
-  version "0.1.0"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.1.0/tokensaver_0.1.0_darwin_amd64.tar.gz"
-      sha256 "1697aa4c6d5d0ea65ef4e2298028550bc8a1316f0f3ecbb72847421f90d6ec80"
+      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.2.2/tokensaver_0.2.2_darwin_amd64.tar.gz"
+      sha256 "4e540e4c2cbb0e435e12ba7e0d0a378a1a1914a4279f38f82bf7ba94288284ec"
 
-      def install
+      define_method(:install) do
         bin.install "tokensaver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.1.0/tokensaver_0.1.0_darwin_arm64.tar.gz"
-      sha256 "367fe447531c3a483103b946956ce23cf590fb5f7ba3f66a32c7dc0ddc51d476"
+      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.2.2/tokensaver_0.2.2_darwin_arm64.tar.gz"
+      sha256 "b3a1f944e782ef1dbb26b098aac8258f7fb4ff6e44277429548aec7fc6bb237d"
 
-      def install
+      define_method(:install) do
         bin.install "tokensaver"
       end
     end
@@ -29,16 +29,16 @@ class Tokensaver < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.1.0/tokensaver_0.1.0_linux_amd64.tar.gz"
-      sha256 "056b421d33273842eb2b74fe29baea8b0497ce24d6a238236464c16c1ab0b5fd"
-      def install
+      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.2.2/tokensaver_0.2.2_linux_amd64.tar.gz"
+      sha256 "7b735988402d4648660aa5476c2035dd604338d55574efb7d69f2df8d63c5898"
+      define_method(:install) do
         bin.install "tokensaver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.1.0/tokensaver_0.1.0_linux_arm64.tar.gz"
-      sha256 "8333ee7ae78dcd559ae89d2b7584895f8540ec61c0ffb36f8cabda7c05bf8934"
-      def install
+      url "https://github.com/use-tokesaver/tokensaver/releases/download/v0.2.2/tokensaver_0.2.2_linux_arm64.tar.gz"
+      sha256 "1f595502698bf8c62be8b17d0377c887ea873b6d69924f4c3e0b3ec0f9d0441f"
+      define_method(:install) do
         bin.install "tokensaver"
       end
     end
